@@ -3,5 +3,10 @@
     <!-- Menu Items -->
     <menuitem id="menu_rest_quietky_root" name="Rest Quietky" sequence="10" web_icon="rest_quietky,static/description/icon.png"/>
 
+    <menuitem id="menu_rest_schedule" name="Schedules" parent="menu_rest_quietky_root" action="action_rest_schedule" />
+    <menuitem id="menu_relaxation_activity" name="Relaxation Activities" parent="menu_rest_quietky_root" action="action_relaxation_activity" />
+    <menuitem id="menu_rest_log" name="Rest Logs" parent="menu_rest_quietky_root" action="action_rest_log" />
+
+
   </data>
 </odoo>
