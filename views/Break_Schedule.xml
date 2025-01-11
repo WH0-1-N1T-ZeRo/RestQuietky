@@ -1,0 +1,158 @@
+<odoo>
+  <!-- list View: Rest Schedule -->
+  <record id="view_rest_schedule_list" model="ir.ui.view">
+    <field name="name">rest.schedule.list</field>
+    <field name="model">rest.schedule</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="name"/>
+        <field name="category"/>
+        <field name="start_time"/>
+        <field name="end_time"/>
+        <field name="status"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Form View: Rest Schedule -->
+  <record id="view_rest_schedule_form" model="ir.ui.view">
+    <field name="name">rest.schedule.form</field>
+    <field name="model">rest.schedule</field>
+    <field name="arch" type="xml">
+      <form>
+        <header>
+          <field name="status" readonly="1" widget="statusbar"/>
+        </header>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="description"/>
+            <field name="category"/>
+            <field name="start_time"/>
+            <field name="end_time"/>
+          </group>
+          <group>
+            <field name="user_id" readonly="1"/>
+          </group>
+        </sheet>
+        <div class="oe_chatter">
+          <chatter>
+            <field name="message_follower_ids" widget="mail_followers" />
+            <field name="activity_ids" widget="mail_activity" />
+            <field name="message_ids" widget="mail_thread" options="{'display_log_button': True}"/>
+          </chatter>
+        </div>
+      </form>
+    </field>
+  </record>
+
+  <!-- list View: Relaxation Activity -->
+  <record id="view_relaxation_activity_list" model="ir.ui.view">
+    <field name="name">relaxation.activity.list</field>
+    <field name="model">relaxation.activity</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="name"/>
+        <field name="duration"/>
+        <field name="recommended_for"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Form View: Relaxation Activity -->
+  <record id="view_relaxation_activity_form" model="ir.ui.view">
+    <field name="name">relaxation.activity.form</field>
+    <field name="model">relaxation.activity</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="duration"/>
+            <field name="recommended_for"/>
+            <field name="description"/>
+          </group>
+        </sheet>
+        <div class="oe_chatter">
+          <chatter>
+            <field name="message_follower_ids" widget="mail_followers" />
+            <field name="activity_ids" widget="mail_activity" />
+            <field name="message_ids" widget="mail_thread" options="{'display_log_button': True}"/>
+          </chatter>
+        </div>
+      </form>
+    </field>
+  </record>
+
+  <!-- list View: Rest Log -->
+  <record id="view_rest_log_list" model="ir.ui.view">
+    <field name="name">rest.log.list</field>
+    <field name="model">rest.log</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="date"/>
+        <field name="sleep_duration"/>
+        <field name="stress_level"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Form View: Rest Log -->
+  <record id="view_rest_log_form" model="ir.ui.view">
+    <field name="name">rest.log.form</field>
+    <field name="model">rest.log</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="date"/>
+            <field name="sleep_duration"/>
+            <field name="stress_level"/>
+            <field name="notes"/>
+          </group>
+        </sheet>
+        <div class="oe_chatter">
+          <chatter>
+            <field name="message_follower_ids" widget="mail_followers" />
+            <field name="activity_ids" widget="mail_activity" />
+            <field name="message_ids" widget="mail_thread" options="{'display_log_button': True}"/>
+          </chatter>
+        </div>
+      </form>
+    </field>
+  </record>
+
+  <!-- Actions -->
+  <record id="action_rest_schedule" model="ir.actions.act_window">
+    <field name="name">Rest Schedules</field>
+    <field name="res_model">rest.schedule</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="oe_view_nocontent_create">
+                Click to create your first Rest Schedule.
+      </p>
+    </field>
+  </record>
+
+  <record id="action_relaxation_activity" model="ir.actions.act_window">
+    <field name="name">Relaxation Activities</field>
+    <field name="res_model">relaxation.activity</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="oe_view_nocontent_create">
+                Click to create your first Relaxation Activity.
+      </p>
+    </field>
+  </record>
+
+  <record id="action_rest_log" model="ir.actions.act_window">
+    <field name="name">Rest Logs</field>
+    <field name="res_model">rest.log</field>
+    <field name="view_mode">list,form</field>
+    <field name="help" type="html">
+      <p class="oe_view_nocontent_create">
+                Click to create your first Rest Log.
+      </p>
+    </field>
+  </record>
+</odoo>

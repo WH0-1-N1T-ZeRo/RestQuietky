@@ -1,0 +1,7 @@
+<odoo>
+  <data>
+    <!-- Menu Items -->
+    <menuitem id="menu_rest_quietky_root" name="Rest Quietky" sequence="10" web_icon="rest_quietky,static/description/icon.png"/>
+
+  </data>
+</odoo>
