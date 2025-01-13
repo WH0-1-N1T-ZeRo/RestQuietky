@@ -1,3 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_rest_schedule_user,access_rest_schedule_user,model_rest_schedule,base.group_user,1,1,1,1
 access_relaxation_activity_user,access_relaxation_activity_user,model_relaxation_activity,base.group_user,1,1,1,1
 access_rest_log_user,access_rest_log_user,model_rest_log,base.group_user,1,1,1,1

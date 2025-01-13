@@ -5,21 +5,20 @@
     'description': """
             Long description of module's purpose
     """,
-    # Creator
     'author': "Suradi",
     'category': 'Schedule',
     'version': '0.1',
-    #Add new Depends mail
+    # any module necessary for this one to work correctly
     'depends': ['base','mail'],
-    #Configuration file data
+    # always loaded
     'data': [
         'security/ir.model.access.csv',
         'views/Break_Schedule.xml',
         'views/Menu.xml',
     ],
     # only loaded in demonstration mode
-    # 'demo': [
-    #     'demo/demo.xml',
-    # ],
+    'demo': [
+        'demo/demo.xml',
+    ],
 }
 

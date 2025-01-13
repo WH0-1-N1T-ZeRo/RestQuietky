@@ -122,11 +122,22 @@
     </field>
   </record>
 
+  <record id="view_rest_schedule_calendar" model="ir.ui.view">
+    <field name="name">rest.schedule.calendar</field>
+    <field name="model">rest.schedule</field>
+    <field name="arch" type="xml">
+        <calendar string="Your Calendar View" date_start="start_time" date_stop="end_time" >
+            <field name="name"/>
+        </calendar>
+    </field>
+</record>
+
+
   <!-- Actions -->
   <record id="action_rest_schedule" model="ir.actions.act_window">
     <field name="name">Rest Schedules</field>
     <field name="res_model">rest.schedule</field>
-    <field name="view_mode">list,form</field>
+    <field name="view_mode">list,form,calendar</field>
     <field name="help" type="html">
       <p class="oe_view_nocontent_create">
                 Click to create your first Rest Schedule.
